@@ -1,0 +1,112 @@
+.home {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-gap: 4rem
+}
+
+
+.btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 5rem;
+    margin-top: 20px;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--first-bg-color);
+    z-index: 1;
+    overflow: hidden;
+
+
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--first-bg-color);
+    z-index: -1;
+    transition: 225ms;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+.home-socials {
+    position: absolute;
+    bottom: 2rem;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: .2rem solid var(--main-color);
+        border-radius: 50px;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        filter: invert(66%) sepia(71%) saturate(5110%) hue-rotate(164deg) brightness(98%) contrast(101%);
+        transition: 225ms;
+    }
+}
+
+.home-socials img:hover {
+    filter: invert(8%) sepia(16%) saturate(3327%) hue-rotate(169deg) brightness(95%) contrast(96%);
+}
+
+.home-socials a:hover {
+    color: var(--first-bg-color);
+}
+
+.home-socials a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 225ms;
+}
+
+.home-socials a:hover::before {
+    width: 100%;
+}
