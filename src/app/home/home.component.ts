@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit{
             this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
           });
       }
-    }, 2000);
+    }, 1500);
   }
 
   typeWord(word: string): Promise<void> {
