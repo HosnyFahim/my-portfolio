@@ -8,6 +8,42 @@
     grid-gap: 4rem
 }
 
+.home-content {
+    max-width: 600px;
+
+    h1 {
+        font-size: var(--big-font);
+        font-weight: 700;
+    }
+
+}
+
+.change-text {
+    font-size: 2rem;
+    font-weight: 600;
+
+    span {
+        color: var(--main-color);
+    }
+
+    h3 {
+        display: inline-flex;
+        margin: 0;
+        vertical-align: top;
+    }
+
+    h3 .word {
+        position: absolute;
+        display: flex;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
 
 .btn-box {
     position: relative;
