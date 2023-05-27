@@ -19,23 +19,20 @@
 }
 
 .change-text {
+    margin-top: 8px;
     font-size: 2rem;
     font-weight: 600;
 
     span {
         color: var(--main-color);
+        position: absolute;
+        display: flex;
     }
 
     h3 {
         display: inline-flex;
         margin: 0;
         vertical-align: top;
-    }
-
-    h3 .word {
-        position: absolute;
-        display: flex;
-        opacity: 0;
     }
 }
 
@@ -64,6 +61,7 @@
     background: var(--main-color);
     border: .2rem solid var(--main-color);
     border-radius: .8rem;
+    box-shadow: var(--neon-box-shadow);
     font-size: 1.8rem;
     font-weight: 600;
     letter-spacing: .1rem;
@@ -110,14 +108,16 @@
         height: 40px;
         background: transparent;
         border: .2rem solid var(--main-color);
-        border-radius: 50px;
+        box-shadow: var(--neon-box-shadow);
+        border-radius: 10px;
         z-index: 1;
         overflow: hidden;
     }
 
     img {
-        width: 20px;
-        height: 20px;
+        width: 32px;
+        height: 32px;
+        border-radius: 50px;
         filter: invert(66%) sepia(71%) saturate(5110%) hue-rotate(164deg) brightness(100%) contrast(200%);
         transition: 225ms;
     }
