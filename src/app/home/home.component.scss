@@ -23,12 +23,12 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center center;
-    height: 600px;
-    width: 600px;
+    height: 550px;
+    width: 550px;
     border: 0.2rem solid var(--main-color);
     box-shadow: var(--neon-box-shadow);
-    animation: animate 5s ease-in-out infinite;
-    transition: all 1s ease-in-out;
+    animation: animate 10s ease-in-out infinite;
+    transition: all 200ms ease-in-out;
 }
 
 .change-text {
@@ -48,12 +48,6 @@
         vertical-align: top;
     }
 }
-
-
-
-
-
-
 
 .btn-box {
     position: relative;
@@ -108,7 +102,7 @@
 .home-socials {
     position: absolute;
     bottom: 16rem;
-    width: 170px;
+    width: 14rem;
     display: flex;
     justify-content: space-between;
 
@@ -158,6 +152,10 @@
 
 .home-socials a:hover::before {
     width: 100%;
+}
+
+.mail {
+    display: flex;
 }
 
 
