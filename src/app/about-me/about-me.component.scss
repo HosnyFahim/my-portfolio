@@ -36,6 +36,12 @@
     align-items: center;
     width: fit-content;
 
+    .about-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     h1 {
         display: inline;
         font-size: clamp(45px, 10vw, 90px);
