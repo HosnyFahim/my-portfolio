@@ -58,27 +58,27 @@
     width: 30.5rem;
     height: 5rem;
     margin-top: 20px;
+
+    .btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 14rem;
+        height: 100%;
+        background: var(--main-color);
+        border: .2rem solid var(--main-color);
+        box-shadow: var(--neon-box-shadow);
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: var(--first-bg-color);
+        z-index: 1;
+        overflow: hidden;
+    }
 }
 
-.btn-box .btn {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 14rem;
-    height: 100%;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    box-shadow: var(--neon-box-shadow);
-    font-size: 1.8rem;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    color: var(--first-bg-color);
-    z-index: 1;
-    overflow: hidden;
 
-
-}
 
 .btn-box .btn:hover {
     color: var(--main-color);
@@ -103,7 +103,7 @@
 .home-socials {
     position: absolute;
     bottom: 16rem;
-    width: 14rem;
+    width: 13rem;
     display: flex;
     justify-content: space-between;
 

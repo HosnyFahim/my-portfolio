@@ -1,22 +1,29 @@
 <section class="my-work">
     <div class="main-text">
-        <h1>Portfolio</h1>
+        <h1>My work</h1>
     </div>
 
-    <div class="my-work-container">
-        <div class="filter-buttons">
-            <button class="btn">All</button>
-            <button class="btn">JavaScript</button>
-            <button class="btn">Angular</button>
-        </div>
+    <div class="filter-buttons">
+        <button class="btn" [ngClass]="{ active: activeButton === 'all' }" (click)="setActiveButton('all')">All</button>
+        <button class="btn" [ngClass]="{ active: activeButton === 'angular' }"
+            (click)="setActiveButton('angular')">Angular</button>
+        <button class="btn" [ngClass]="{ active: activeButton === 'javascript' }"
+            (click)="setActiveButton('javascript')">JavaScript</button>
     </div>
 
     <div class="project-gallery">
-        <div class="project-box">
+        <div *ngFor="let project of filteredProjects" class="project-box">
             <div class="project-img">
-                <img src="">
+                <img [src]="project.image">
+            </div>
+            <div class="project-content">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <div class="project-btn">
+                    <a href="#">Try out</a>
+                    <a href="#">Git</a>
+                </div>
             </div>
         </div>
     </div>
-
 </section>
