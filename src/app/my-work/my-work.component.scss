@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background: var(--second-bg-color);
-    gap: 4rem;
+    gap: 10rem;
 }
 
 
@@ -77,12 +77,12 @@ h1 {
 .project-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-    gap: 4rem;
+    gap: 8rem;
 
     .project-box {
         position: relative;
-        overflow: hidden;
-        background: transparent;
+        overflow: visible;
+        background: var(--first-bg-color);
         display: flex;
         grid-template-rows: 1fr auto;
         align-items: center;
@@ -99,7 +99,6 @@ h1 {
             img {
                 width: 100%;
                 height: 100%;
-                transform: scale(1.4);
                 transition: 225ms;
             }
         }
@@ -111,7 +110,7 @@ h1 {
             width: 100%;
             height: 100%;
             opacity: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), var(--text-color));
+            background: linear-gradient(rgba(0, 0, 0, 0.4), var(--main-color));
             display: flex;
             justify-content: center;
             align-items: center;
@@ -120,17 +119,23 @@ h1 {
             transition: 225ms;
             padding: 0 2rem;
 
-            h3 {
-                font-size: 1.5rem;
+            h2 {
+                font-size: 1.7rem;
                 font-weight: 600;
                 color: var(--main-color);
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: var(--text-color);
             }
 
             p {
                 font-size: 16px;
                 font-weight: 600;
                 margin: 5px 0 15px 0;
-                color: var(--main-color);
+                color: var(--text-color);
             }
 
             a {
@@ -153,13 +158,39 @@ h1 {
     }
 }
 
+
+.vertical {
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background-color: var(--main-color);
+    box-shadow: var(--neon-box-shadow);
+    transform: translateX(-50%);
+
+    .vertical :hover {}
+}
+
+.horizontal {
+    position: absolute;
+    top: 122%;
+    left: 32px;
+    width: 75%;
+    height: 2px;
+    background-color: var(--main-color);
+    box-shadow: var(--neon-box-shadow);
+    transform: translateY(-50%);
+}
+
 .project-box:hover .project-content {
     opacity: 1 !important;
 }
 
 .project-box:hover .project-img {
-    transform: scale(1.1) !important;
     transition: all 225ms ease-in-out;
+    z-index: -1;
 }
 
 .project-btn {

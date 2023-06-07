@@ -9,26 +9,30 @@ export class MyWorkComponent {
   projects = [
     {
       title: 'Join',
+      undertitle: 'JavaScript | HTML | CSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       image: '/assets/img/join.png',
       category: 'javascript'
     },
     {
       title: 'El Pollo Loco',
+      undertitle: 'OPP | JavaScript | HTML | CSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      image: '/assets/img/pollo-loco.png',
+      image: '/assets/img/el-pollo-loco.png',
       category: 'angular'
     },
     {
       title: 'Ring of Fire',
+      undertitle: 'Angular | TypeScript | HTML | SCSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
       image: '/assets/img/join.png',
       category: 'angular'
     },
     {
       title: 'Portfolio',
+      undertitle: 'Angula | TypeScript | HTML | SCSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      image: '/assets/img/pollo-loco.png',
+      image: '/assets/img/el-pollo-loco.png',
       category: 'javascript'
     }
   ];
