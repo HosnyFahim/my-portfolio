@@ -8,7 +8,7 @@
 
 h1 {
     display: inline;
-    font-size: clamp(45px, 10vw, 90px);
+    font-size: var(--title-font);
     font-weight: 700;
     line-height: 75px;
     white-space: nowrap;
