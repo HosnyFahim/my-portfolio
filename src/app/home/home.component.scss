@@ -83,6 +83,7 @@
 
 .btn-box .btn:hover {
     color: var(--main-color);
+    transition: 225ms ease-in-out;
 }
 
 .btn-box .btn::before {

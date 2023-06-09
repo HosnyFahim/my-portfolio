@@ -48,6 +48,7 @@ h1 {
 
 .filter-buttons .btn:hover {
     color: var(--first-bg-color);
+    transition: 225ms ease-in-out;
 }
 
 .filter-buttons .btn::before {
@@ -170,7 +171,6 @@ h1 {
     box-shadow: var(--neon-box-shadow);
     transform: translateX(-50%);
 
-    .vertical :hover {}
 }
 
 .horizontal {
