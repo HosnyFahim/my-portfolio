@@ -1,13 +1,16 @@
 <section class="contact">
     <div class="contact-title">
         <h2>Contact Me</h2>
-        <span>ask me something</span>
+        <span>ask me something!</span>
     </div>
 
     <form>
-        <input type="text" placeholder="Your Name">
-        <input type="text" placeholder="Your Email">
-        <textarea type="text" placeholder="Add Message"></textarea>
+        <input type="text" placeholder="Your Name" (click)="highlightInput('name')"
+            [ngClass]="{ 'active': activeInput === 'name' }">
+        <input type="text" placeholder="Your Email" (click)="highlightInput('email')"
+            [ngClass]="{ 'active': activeInput === 'email' }">
+        <textarea placeholder="Add Message" (click)="highlightInput('message')"
+            [ngClass]="{ 'active': activeInput === 'message' }"></textarea>
         <div class="btn-box formBtn">
             <button type="submit" class="btn">Send</button>
         </div>

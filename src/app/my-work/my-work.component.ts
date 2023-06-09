@@ -10,7 +10,7 @@ export class MyWorkComponent {
     {
       title: 'Join',
       undertitle: 'JavaScript | HTML | CSS',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'A Kanban Project Management App. Create tasks, assign users and categories, and change task status by simply using drag-and-drop.',
       image: '/assets/img/join.png',
       category: 'javascript'
     },

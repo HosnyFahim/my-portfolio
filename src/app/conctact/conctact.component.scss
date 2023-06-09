@@ -35,14 +35,20 @@
 .contact form input,
 .contact form textarea {
     width: 100%;
-    color: var(--text-color);
+    color: var(--text-color) !important;
     background: var(--second-bg-color);
-    margin-bottom: .8rem;
-    border: .2rem solid var(--main-color);
-    box-shadow: var(--neon-box-shadow);
+    margin-bottom: 2rem;
+    border: 2px solid var(--second-bg-color);
+    // box-shadow: var(--neon-box-shadow);
     padding: .7rem;
     resize: none;
+    font-size: 20px;
+    transition: 225ms ease-in-out;
+}
 
+.active {
+    border: 2px solid var(--main-color) !important;
+    box-shadow: var(--neon-box-shadow);
 }
 
 textarea {
@@ -59,7 +65,7 @@ textarea {
     width: 14rem;
     height: 4rem;
     background: var(--main-color);
-    border: 0.2rem solid var(--main-color);
+    border: 2px solid var(--main-color);
     box-shadow: var(--neon-box-shadow);
     font-size: 1.8rem;
     font-weight: 600;

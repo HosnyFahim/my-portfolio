@@ -9,6 +9,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { ConctactComponent } from './conctact/conctact.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -28,7 +29,8 @@ const routes: Routes = [
     SkillsComponent,
     MyWorkComponent,
     ConctactComponent,
-    ImprintComponent
+    ImprintComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

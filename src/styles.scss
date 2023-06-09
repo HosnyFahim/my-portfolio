@@ -22,13 +22,13 @@
 }
 
 :root {
-    --first-bg-color: #081b29;
-    --second-bg-color: #112e42;
+    --first-bg-color: #000;
+    --second-bg-color: #081b29;
     --text-color: #ededed;
     --main-color: #12f7ff;
     --title-font: 4rem;
     --big-font: 3rem;
-    --normal-font: 2rem;
+    --normal-font: 20px;
     --neon-box-shadow: 0 0 .5rem #12f7ff;
     --h2-font: 3rem;
     --font-neon-text-shadow: 0 0 10px rgba(18, 247, 255, 0.3),
@@ -46,6 +46,10 @@ body {
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
     background: var(--first-bg-color);
     color: var(--text-color);
+
+    p {
+        font-size: var(--normal-font);
+    }
 }
 
 section {
