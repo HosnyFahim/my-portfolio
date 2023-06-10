@@ -42,6 +42,7 @@ h1 {
         z-index: 1;
         overflow: hidden;
         cursor: pointer;
+        transition: border-radius 225ms;
 
     }
 }
@@ -49,6 +50,7 @@ h1 {
 .filter-buttons .btn:hover {
     color: var(--first-bg-color);
     transition: 225ms ease-in-out;
+    border-radius: 0% 0% 30px 0%;
 }
 
 .filter-buttons .btn::before {
@@ -69,6 +71,7 @@ h1 {
 
 .filter-buttons .btn.active {
     color: var(--first-bg-color);
+    border-radius: 0% 0% 30px 0%;
 }
 
 .filter-buttons .btn.active::before {
@@ -89,6 +92,7 @@ h1 {
         align-items: center;
         border: 2px solid var(--main-color);
         box-shadow: var(--neon-box-shadow);
+        transition: border-radius 225ms;
 
         .project-img {
             display: flex;
@@ -156,12 +160,16 @@ h1 {
                 font-size: 16px;
                 font-weight: 600;
                 transition: 225ms ease-in-out;
+                transition: border-radius 225ms;
             }
         }
 
     }
 }
 
+.project-box:hover {
+    border-radius: 0% 0% 100px 0%;
+}
 
 .project-box:hover .project-content {
     opacity: 1 !important;
@@ -185,6 +193,8 @@ h1 {
 
 .project-content a:hover {
     color: var(--first-bg-color) !important;
+    transition: 225ms ease-in-out;
+    border-radius: 0% 0% 15px 0%;
 }
 
 .project-content a::before {

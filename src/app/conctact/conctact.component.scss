@@ -49,6 +49,7 @@
 .active {
     border: 2px solid var(--main-color) !important;
     box-shadow: var(--neon-box-shadow);
+    border-radius: 0px 0px 40px 0px;
 }
 
 textarea {
@@ -74,11 +75,13 @@ textarea {
     z-index: 1;
     overflow: hidden;
     cursor: pointer;
+    transition: border-radius 225ms;
 }
 
 .btn:hover {
     color: var(--main-color);
     transition: 225ms ease-in-out;
+    border-radius: 0px 0px 40px 0px;
 }
 
 .btn::before {
