@@ -1,11 +1,17 @@
 <header class="header">
     <img src="./assets/icons/logo.png" class="logo">
     <nav class="navBar">
-        <a routerLink="/home" routerLinkActive="active">HOME</a>
-        <a routerLink="/about" routerLinkActive="active">ABOUT ME</a>
-        <a routerLink="/skills" routerLinkActive="active">SKILLS</a>
-        <a routerLink="/myWork" routerLinkActive="active">PORTFOLIO</a>
-        <a routerLink="/contact" routerLinkActive="active">CONTACT</a>
+        <header class="header">
+            <img src="./assets/icons/logo.png" class="logo">
+            <nav class="navBar">
+                <a href="#home" [class.active]="isActiveHome">HOME</a>
+                <a href="#about" [class.active]="isActiveAbout">ABOUT ME</a>
+                <a href="#skills" [class.active]="isActiveSkills">SKILLS</a>
+                <a href="#my-work" [class.active]="isActiveMyWork">PORTFOLIO</a>
+                <a href="#contact" [class.active]="isActiveContact">CONTACT</a>
+            </nav>
+            <img src="./assets/icons/hamburger.svg" class="burger-menu" id="burger-menu">
+        </header>
     </nav>
     <img src="./assets/icons/hamburger.svg" class="burger-menu" id="burger-menu">
 </header>

@@ -12,7 +12,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutMeComponent },
   { path: 'skills', component: SkillsComponent },

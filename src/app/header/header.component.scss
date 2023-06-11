@@ -25,8 +25,7 @@ header {
     transition: 225ms;
 }
 
-.navBar a:hover,
-.navBar a.aktive {
+.navBar a:hover {
     color: var(--main-color);
     text-shadow: 0 0 10px rgba(18, 247, 255, 0.4),
         0 0 20px rgba(18, 247, 255, 0.4),
@@ -36,6 +35,10 @@ header {
         0 0 80px rgba(18, 247, 255, 0.4),
         0 0 100px rgba(18, 247, 255, 0.4),
         0 0 150px rgba(18, 247, 255, 0.4);
+}
+
+.active {
+    color: var(--main-color);
 }
 
 .burger-menu {
