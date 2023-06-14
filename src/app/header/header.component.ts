@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,21 +7,44 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isActiveHome!: boolean;
-  isActiveAbout!: boolean;
-  isActiveSkills!: boolean;
-  isActiveMyWork!: boolean;
-  isActiveContact!: boolean;
+  isActiveHome: boolean = false;
+  isActiveAbout: boolean = false;
+  isActiveSkills: boolean = false;
+  isActiveMyWork: boolean = false;
+  isActiveContact: boolean = false;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.fragment.subscribe(fragment => {
-      this.isActiveHome = fragment === 'home';
-      this.isActiveAbout = fragment === 'about';
-      this.isActiveSkills = fragment === 'skills';
-      this.isActiveMyWork = fragment === 'my-work';
-      this.isActiveContact = fragment === 'contact';
+      this.updateActiveSections(fragment);
     });
+
+    this.updateActiveSections(this.route.snapshot.fragment);
+  }
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.updateActiveSections(this.route.snapshot.fragment);
+  }
+
+  private updateActiveSections(fragment: string | null): void {
+    const homeElement = document.getElementById('home');
+    const aboutElement = document.getElementById('about');
+    const skillsElement = document.getElementById('skills');
+    const myWorkElement = document.getElementById('my-work');
+    const contactElement = document.getElementById('contact');
+
+    const isHomeActive = !!homeElement && homeElement.getBoundingClientRect().top <= 100 && homeElement.getBoundingClientRect().bottom > 100;
+    const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 100 && aboutElement.getBoundingClientRect().bottom > 100;
+    const isSkillsActive = !!skillsElement && skillsElement.getBoundingClientRect().top <= 100 && skillsElement.getBoundingClientRect().bottom > 100;
+    const isMyWorkActive = !!myWorkElement && myWorkElement.getBoundingClientRect().top <= 100 && myWorkElement.getBoundingClientRect().bottom > 100;
+    const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 100 && contactElement.getBoundingClientRect().bottom > 100;
+
+    this.isActiveHome = isHomeActive || (fragment === 'home' && !isAboutActive && !isSkillsActive && !isMyWorkActive && !isContactActive);
+    this.isActiveAbout = isAboutActive || (fragment === 'about' && !isSkillsActive && !isMyWorkActive && !isContactActive);
+    this.isActiveSkills = isSkillsActive || (fragment === 'skills' && !isMyWorkActive && !isContactActive);
+    this.isActiveMyWork = isMyWorkActive || (fragment === 'my-work' && !isContactActive);
+    this.isActiveContact = isContactActive;
   }
 }
