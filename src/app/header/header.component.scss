@@ -4,7 +4,7 @@ header {
     left: 0;
     width: 100%;
     height: 100px;
-    padding: 1rem 3%;
+    padding: 1rem 10%;
     background: var(--first-bg-color);
     display: flex;
     justify-content: space-between;
@@ -20,21 +20,14 @@ header {
 
 .navBar a {
     color: var(--text-color);
-    font-weight: 500;
+    font-weight: 600;
     margin-left: 3.5rem;
     transition: 225ms;
 }
 
 .navBar a:hover {
     color: var(--main-color);
-    text-shadow: 0 0 10px rgba(18, 247, 255, 0.4),
-        0 0 20px rgba(18, 247, 255, 0.4),
-        0 0 30px rgba(18, 247, 255, 0.4),
-        0 0 40px rgba(18, 247, 255, 0.4),
-        0 0 70px rgba(18, 247, 255, 0.4),
-        0 0 80px rgba(18, 247, 255, 0.4),
-        0 0 100px rgba(18, 247, 255, 0.4),
-        0 0 150px rgba(18, 247, 255, 0.4);
+    text-shadow: var(--font-neon-text-shadow);
 }
 
 .active {
