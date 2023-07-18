@@ -12,6 +12,8 @@ export class HeaderComponent implements OnInit {
   isActiveSkills: boolean = false;
   isActiveMyWork: boolean = false;
   isActiveContact: boolean = false;
+  isMenuOpen: boolean = false;
+  isMobileResolution: boolean = false;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -21,11 +23,17 @@ export class HeaderComponent implements OnInit {
     });
 
     this.updateActiveSections(this.route.snapshot.fragment);
+    this.updateMobileResolution();
   }
 
   @HostListener('window:scroll')
   onScroll(): void {
     this.updateActiveSections(this.route.snapshot.fragment);
+  }
+
+  @HostListener('window:resize')
+  onResize(): void {
+    this.updateMobileResolution();
   }
 
   private updateActiveSections(fragment: string | null): void {
@@ -46,5 +54,23 @@ export class HeaderComponent implements OnInit {
     this.isActiveSkills = isSkillsActive || (fragment === 'skills' && !isMyWorkActive && !isContactActive);
     this.isActiveMyWork = isMyWorkActive || (fragment === 'my-work' && !isContactActive);
     this.isActiveContact = isContactActive;
+  }
+
+  private updateMobileResolution(): void {
+    this.isMobileResolution = window.innerWidth <= 900;
+    if (!this.isMobileResolution) {
+      this.isMenuOpen = false;
+    }
+  }
+
+  toggleMenu(): void {
+    if (!this.isMobileResolution) {
+      return;
+    }
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
   }
 }

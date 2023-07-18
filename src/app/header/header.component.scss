@@ -21,6 +21,7 @@ header {
 .navBar a {
     color: var(--text-color);
     font-weight: 600;
+    font-size: 1.5rem;
     margin-left: 3.5rem;
     transition: 225ms;
 }
@@ -35,10 +36,63 @@ header {
 }
 
 .burger-menu {
-    width: 2.5rem;
-    height: 2.5rem;
-    z-index: 10001;
-    filter: invert(100%) sepia(44%) saturate(248%) hue-rotate(245deg) brightness(117%) contrast(86%);
+    width: 2rem;
+    height: 2rem;
+    z-index: 1000;
     cursor: pointer;
     display: none;
+}
+
+.close {
+    width: 2rem;
+    height: 2rem;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+    .navBar a {
+        margin-left: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .navBar a {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navBar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: var(--first-bg-color);
+        overflow: hidden;
+        transition: right .6s;
+        z-index: 52;
+        display: grid;
+        place-content: center;
+    }
+
+    .navBar.active {
+        right: 0;
+        transition-delay: 0s;
+    }
+
+    .navBar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
 }
