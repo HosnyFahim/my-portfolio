@@ -35,18 +35,17 @@
         0 0 70px rgba(18, 247, 255, 0.3),
         0 0 80px rgba(18, 247, 255, 0.3),
         0 0 100px rgba(18, 247, 255, 0.3),
-        0 0 150px rgba(18, 247, 255, 0.3);
+        0 0 101px rgba(18, 247, 255, 0.3);
 }
 
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--first-bg-color);
+    background: var(--second-bg-color);
     color: var(--text-color);
 }
 
 section {
-    min-height: 100vh;
     padding: 120px 10%;
 }
 

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  words: string[] = ['Programmer', 'Frontend Developer'];
+  words: string[] = ['PROGRAMMER...', 'FRONTEND DEVELOPER'];
   currentWordIndex: number = 0;
   currentWord: string = '';
   isTyping: boolean = false;
