@@ -43,9 +43,9 @@ export class HeaderComponent implements OnInit {
     const myWorkElement = document.getElementById('my-work');
     const contactElement = document.getElementById('contact');
 
-    const isHomeActive = !!homeElement && homeElement.getBoundingClientRect().top <= 100 && homeElement.getBoundingClientRect().bottom > 100;
-    const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 100 && aboutElement.getBoundingClientRect().bottom > 100;
-    const isSkillsActive = !!skillsElement && skillsElement.getBoundingClientRect().top <= 100 && skillsElement.getBoundingClientRect().bottom > 100;
+    const isHomeActive = !!homeElement && homeElement.getBoundingClientRect().top <= 120 && homeElement.getBoundingClientRect().bottom > 120;
+    const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 200 && aboutElement.getBoundingClientRect().bottom > 200;
+    const isSkillsActive = !!skillsElement && skillsElement.getBoundingClientRect().top <= 200 && skillsElement.getBoundingClientRect().bottom > 200;
     const isMyWorkActive = !!myWorkElement && myWorkElement.getBoundingClientRect().top <= 100 && myWorkElement.getBoundingClientRect().bottom > 100;
     const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 100 && contactElement.getBoundingClientRect().bottom > 100;
 
