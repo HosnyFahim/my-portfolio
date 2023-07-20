@@ -1,44 +1,122 @@
-.skills-container {
+section {
     display: flex;
-    flex-direction: column;
-    gap: 4rem;
-
-    h1 {
-        display: inline;
-        font-size: var(--title-font);
-        font-weight: 700;
-        line-height: 75px;
-        white-space: nowrap;
-        color: var(--main-color);
-        text-shadow: var(--neon-box-shadow);
-    }
+    width: 100%;
+    padding: 0 10%;
+    color: #fff;
+    margin-top: 200px;
+    position: relative;
+    scroll-margin-top: 170px;
 }
 
-.skills-list {
+.icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px clamp(60px, 11.3651877133px + 5.1194539249vw, 90px);
+    max-width: 60%;
+    z-index: 15;
+}
+
+img:hover {
+    animation: jump 225ms;
+}
+
+.right-line {
+    position: absolute;
+    top: clamp(42px, 29.0307167235px + 1.3651877133vw, 50px);
+    right: 0;
+    width: clamp(30px, 8.9473684211px + 6.5789473684vw, 110px);
+    background: var(--main-color);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1.5px solid var(--main-color);
+    box-shadow: var(--neon-box-shadow);
+}
+
+.description-container {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 160px;
-    margin-top: 40px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
 
-    div {
-        display: flex;
+    span {
+        font-weight: 900;
+        font-size: clamp(2rem, 1.375rem + 3.125vw, 4.375rem);
+        display: inline-block;
+        width: max-content;
+        margin-left: 30px;
+    }
+
+    p {
+        width: 90%;
+        text-align: right;
+        font-weight: 400;
+        font-size: clamp(1rem, .9671052632rem + .1644736842vw, 1.125rem);
+        line-height: 120%;
+    }
+
+    .btn-box {
+        margin: 0 clamp(35px, -54.1638225256px + 9.385665529vw, 90px) 0 0;
         position: relative;
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        background: transparent;
-        gap: 14px;
-        cursor: pointer;
+        height: 4rem;
+        z-index: 15;
 
-        img {
-            filter: invert(100%) sepia(70%) saturate(19%) hue-rotate(204deg) brightness(111%) contrast(86%);
+        .btn {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 12rem;
+            height: 100%;
+            background: var(--main-color);
+            border: 2px solid var(--main-color);
+            box-shadow: var(--neon-box-shadow);
+            font-size: clamp(1.25rem, 1.0427631579rem + .4111842105vw, 1.6375rem);
+            font-weight: 600;
+            color: var(--first-bg-color);
+            z-index: 1;
+            overflow: hidden;
+            transition: border-radius 225ms;
+
         }
     }
 }
 
-.skills-list div:hover {
-    animation: jump 225ms 1;
+.btn:hover {
+    color: var(--main-color) !important;
+    transition: 225ms ease-in-out;
+    border-radius: 0% 0% 50px 0% / 0% 0% 50px 0%;
+}
+
+.btn-box .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: 225ms;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+.bg-img {
+    position: absolute;
+    left: 0;
+    top: 115px;
+    background-image: url(/assets/img/vector3.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+    width: clamp(200px, 173.6842105263px + 8.2236842105vw, 300px);
+    height: 700px;
+    z-index: 10;
 }
 
 @keyframes jump {
@@ -60,5 +138,39 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    section {
+        padding: 0 5%;
+        flex-direction: column-reverse;
+        gap: 50px;
+        margin-top: clamp(100px, 41.6666666667px + 16.6666666667vw, 200px);
+    }
+
+    .icons-container {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 20px clamp(25px, -46.1111111111px + 22.2222222222vw, 165px);
+        max-width: 100%;
+    }
+
+    .btn-box {
+        position: absolute !important;
+        bottom: -126px;
+        left: 50%;
+        transform: translate(-50%);
+        margin: 0 !important;
+    }
+
+    .right-line {
+        top: clamp(26px, 18.8888888889px + 2.2222222222vw, 40px);
+        width: clamp(13px, 2.3333333333px + 3.3333333333vw, 34px);
+    }
+
+    .bg-img {
+        top: 80%;
     }
 }
