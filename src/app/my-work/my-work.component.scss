@@ -3,17 +3,46 @@
     flex-direction: column;
     background: var(--second-bg-color);
     gap: 4rem;
+    background-image: url(/assets/img/vector4.svg);
+    background-repeat: no-repeat;
+    background-position: -120px 50%;
+    background-size: 500px;
+    position: relative;
 }
 
+.main-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    margin-top: clamp(240px, 28.666667px + 9.666667vw, 290px);
+    scroll-margin-top: 100px;
+    z-index: 15;
+    gap: 30px;
+    text-align: center;
 
-h1 {
-    display: inline;
-    font-size: var(--title-font);
-    font-weight: 700;
-    line-height: 75px;
-    white-space: nowrap;
-    color: var(--main-color);
-    text-shadow: var(--neon-box-shadow);
+    span {
+        display: inline-block;
+        font-weight: 900;
+        font-size: clamp(2rem, 1.375rem + 3.125vw, 4.375rem);
+        padding: 0 20px;
+        z-index: 15;
+        background-color: #141d2f;
+    }
+}
+
+.left-line {
+    width: 75vw;
+    background-color: #4b47ff;
+    position: absolute;
+    right: 0;
+    top: clamp(25px, 16.8421052632px + 2.5493421053vw, 56px);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1.5px solid var(--main-color);
+    box-shadow: var(--neon-box-shadow);
 }
 
 .filter-buttons {
@@ -21,7 +50,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 2rem;
     height: 4rem;
 
@@ -30,16 +58,15 @@ h1 {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 14rem;
+        width: 12rem;
         height: 100%;
-        background: var(--first-bg-color);
+        background: var(--second-bg-color);
         border: 2px solid var(--main-color);
         box-shadow: var(--neon-box-shadow);
         font-size: 1.8rem;
         font-weight: 600;
-        letter-spacing: .1rem;
         color: var(--main-color);
-        z-index: 1;
+        z-index: 15;
         overflow: hidden;
         cursor: pointer;
         transition: border-radius 225ms;
@@ -50,7 +77,8 @@ h1 {
 .filter-buttons .btn:hover {
     color: var(--first-bg-color);
     transition: 225ms ease-in-out;
-    border-radius: 0% 0% 30px 0%;
+    border-radius: 0% 0% 50px 0%;
+    border: none;
 }
 
 .filter-buttons .btn::before {
@@ -71,7 +99,8 @@ h1 {
 
 .filter-buttons .btn.active {
     color: var(--first-bg-color);
-    border-radius: 0% 0% 30px 0%;
+    border-radius: 0% 0% 50px 0%;
+    border: none;
 }
 
 .filter-buttons .btn.active::before {
@@ -104,7 +133,7 @@ h1 {
             img {
                 object-fit: contain;
                 max-width: 100%;
-                width: 500px;
+                width: 550px;
                 transition: 225ms;
             }
         }
@@ -129,10 +158,11 @@ h1 {
             h2 {
                 font-size: 1.7rem;
                 font-weight: 600;
-                color: var(--main-color);
+                color: var(--text-color);
             }
 
             h3 {
+                font-family: 'Poppins', sans-serif;
                 font-size: 1.2rem;
                 font-weight: 600;
                 color: var(--text-color);
@@ -143,6 +173,9 @@ h1 {
                 font-weight: 600;
                 margin: 5px 0 15px 0;
                 color: var(--text-color);
+                font-weight: 400;
+                font-size: clamp(1rem, .9671052632rem + .1644736842vw, 1.125rem);
+                line-height: 120%;
             }
 
             a {
@@ -152,8 +185,8 @@ h1 {
                 align-items: center;
                 width: 80px;
                 height: 40px;
-                color: var(--main-color);
-                background: var(--first-bg-color);
+                color: var(--text-color);
+                background: var(--second-bg-color);
                 box-shadow: var(--neon-box-shadow);
                 z-index: 1;
                 overflow: hidden;
@@ -168,7 +201,7 @@ h1 {
 }
 
 .project-box:hover {
-    border-radius: 0% 0% 100px 0%;
+    border-radius: 0% 0% 150px 0%;
 }
 
 .project-box:hover .project-content {
@@ -181,7 +214,7 @@ h1 {
 
 .project-box:hover .project-img img {
     transition: all 225ms ease-in-out;
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 .project-btn {
@@ -192,9 +225,11 @@ h1 {
 
 
 .project-content a:hover {
-    color: var(--first-bg-color) !important;
     transition: 225ms ease-in-out;
-    border-radius: 0% 0% 15px 0%;
+    border-radius: 0% 0% 30px 0%;
+    box-shadow: var(--neon-box-shadow-2) !important;
+    border: none !important;
+
 }
 
 .project-content a::before {
@@ -204,11 +239,67 @@ h1 {
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--main-color);
+    background: var(--title-color);
     z-index: -1;
     transition: 225ms;
 }
 
 .project-content a:hover::before {
     width: 100%;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 900px) {
+    .my-work {
+        padding: 0 5%;
+    }
+
+    .main-text {
+        padding: 0 5%;
+    }
+
+    section {
+        margin-top: 120px;
+    }
+
+
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .my-work {
+        background-size: contain !important;
+        background-position: center;
+    }
+
+    .filter-buttons {
+        gap: 1rem !important;
+
+        .btn {
+            font-size: clamp(0.8rem, 0.1333rem + 3.8095vw, 1.8rem) !important;
+            font-weight: 500 !important;
+        }
+    }
+
+    .project-img {
+        img {
+            width: 100% !important;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 469px) {
+    // .btn {
+    //     width: clamp(6.563rem, 46.032vw - 1.493rem, 12rem) !important;
+    // }
+
+
 }

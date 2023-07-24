@@ -5,7 +5,8 @@ header {
     width: 100%;
     height: 100px;
     padding: 1rem 10%;
-    background: var(--second-bg-color);
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);
     display: flex;
     justify-content: space-between;
     align-items: center;

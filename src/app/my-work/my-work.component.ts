@@ -9,7 +9,7 @@ export class MyWorkComponent {
   projects = [
     {
       title: 'Join',
-      undertitle: 'JavaScript | HTML | CSS',
+      undertitle: 'JavaScript | HTML | CSS | Backend',
       description: 'A Kanban Project Management Web-App. Create tasks, assign users and categories, and change task status by simply using drag-and-drop.',
       image: '/assets/img/join.png',
       category: 'javascript'

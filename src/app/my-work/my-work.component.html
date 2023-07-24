@@ -1,7 +1,11 @@
-<section class="my-work" id="my-work">
-    <div class="main-text">
-        <h1>My work</h1>
-    </div>
+<div class="main-text" id="my-work">
+    <div class="left-line"></div>
+    <span>Portfolio</span>
+    <p>This page is a sample of my work - please feel free to try them out.</p>
+</div>
+
+<section class="my-work" id="portfolio">
+
 
     <div class="filter-buttons">
         <button class="btn" [ngClass]="{ active: activeButton === 'all' }" (click)="setActiveButton('all')">All</button>
@@ -17,8 +21,8 @@
                 <img [src]="project.image">
             </div>
             <div class="project-content">
-                <h2>{{ project.title }}</h2>
-                <h3>{{ project.undertitle }}</h3>
+                <span>{{ project.title }}</span>
+                <span>{{ project.undertitle }}</span>
                 <p>{{ project.description }}</p>
                 <div class="project-btn">
                     <a href="#">Try it</a>
@@ -27,4 +31,5 @@
             </div>
         </div>
     </div>
+    <img src="" alt="">
 </section>

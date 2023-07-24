@@ -41,18 +41,19 @@ export class HeaderComponent implements OnInit {
     const aboutElement = document.getElementById('about');
     const skillsElement = document.getElementById('skills');
     const myWorkElement = document.getElementById('my-work');
+    const portfolioElement = document.getElementById('portfolio');
     const contactElement = document.getElementById('contact');
 
-    const isHomeActive = !!homeElement && homeElement.getBoundingClientRect().top <= 120 && homeElement.getBoundingClientRect().bottom > 120;
-    const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 200 && aboutElement.getBoundingClientRect().bottom > 200;
-    const isSkillsActive = !!skillsElement && skillsElement.getBoundingClientRect().top <= 200 && skillsElement.getBoundingClientRect().bottom > 200;
-    const isMyWorkActive = !!myWorkElement && myWorkElement.getBoundingClientRect().top <= 100 && myWorkElement.getBoundingClientRect().bottom > 100;
-    const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 100 && contactElement.getBoundingClientRect().bottom > 100;
+    const isHomeActive = !!homeElement && homeElement.getBoundingClientRect().top <= 200 && homeElement.getBoundingClientRect().bottom > 100;
+    const isAboutActive = !!aboutElement && aboutElement.getBoundingClientRect().top <= 200 && aboutElement.getBoundingClientRect().bottom > 100;
+    const isSkillsActive = !!skillsElement && skillsElement.getBoundingClientRect().top <= 200 && skillsElement.getBoundingClientRect().bottom > 100;
+    const isMyWorkActive = !!myWorkElement && !!portfolioElement && myWorkElement.getBoundingClientRect().top <= 200 && myWorkElement.getBoundingClientRect().bottom > 200;
+    const isContactActive = !!contactElement && contactElement.getBoundingClientRect().top <= 200 && contactElement.getBoundingClientRect().bottom > 100;
 
-    this.isActiveHome = isHomeActive || (fragment === 'home' && !isAboutActive && !isSkillsActive && !isMyWorkActive && !isContactActive);
-    this.isActiveAbout = isAboutActive || (fragment === 'about' && !isSkillsActive && !isMyWorkActive && !isContactActive);
-    this.isActiveSkills = isSkillsActive || (fragment === 'skills' && !isMyWorkActive && !isContactActive);
-    this.isActiveMyWork = isMyWorkActive || (fragment === 'my-work' && !isContactActive);
+    this.isActiveHome = isHomeActive;
+    this.isActiveAbout = isAboutActive;
+    this.isActiveSkills = isSkillsActive;
+    this.isActiveMyWork = isMyWorkActive;
     this.isActiveContact = isContactActive;
   }
 

@@ -155,6 +155,10 @@ img:hover {
         grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
         gap: 20px clamp(25px, -46.1111111111px + 22.2222222222vw, 165px);
         max-width: 100%;
+
+        img {
+            width: clamp(70px, 60.8571428571px + 2.8571428571vw, 88px);
+        }
     }
 
     .btn-box {
@@ -171,6 +175,7 @@ img:hover {
     }
 
     .bg-img {
-        top: 80%;
+        top: 30%;
+        height: 600px;
     }
 }

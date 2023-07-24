@@ -33,8 +33,8 @@
         font-size: clamp(2.5rem, -0.625rem + 5vw, 4.375rem);
         height: -moz-fit-content;
         height: fit-content;
-        margin-top: 11%;
-        left: -19%;
+        margin-top: 10%;
+        left: -18%;
     }
 
     h1 {
@@ -67,6 +67,7 @@
         width: max-content;
         font-size: clamp(2rem, .1761945392rem + 3.0716723549vw, 3.125rem);
         font-weight: 600;
+        top: clamp(5.438rem, 5.143vw + 2.223rem, 7.688rem);
     }
 
     h3 {
@@ -82,6 +83,7 @@
     justify-content: center;
     align-items: center;
     height: 4rem;
+    width: 100%;
     margin-top: 140px;
 
     .btn {
@@ -131,7 +133,7 @@
 
 .home-socials {
     position: absolute;
-    bottom: -88px;
+    bottom: 0;
     left: 0;
     width: 28rem;
     display: flex;
@@ -183,6 +185,7 @@
 .home-socials a:hover {
     color: var(--first-bg-color);
     border-radius: 0% 0% 15px 0%;
+    border: none;
 }
 
 .home-socials a::before {
@@ -230,29 +233,20 @@
         left: -4%;
     }
 
-    .btn-box {
-        margin-left: 55px;
-    }
 }
 
 @media only screen and (max-width: 1500px) {}
 
-@media only screen and (max-width: 1450px) {
-    .btn-box {
-        margin-left: 50px;
-    }
-}
+@media only screen and (max-width: 1450px) {}
 
 @media only screen and (max-width: 1400px) {
     .btn-box {
-        margin-left: 40px;
         margin-top: 120px;
     }
 }
 
 @media only screen and (max-width: 1350px) {
     .btn-box {
-        width: 25.5rem;
         margin-top: 100px;
 
         .btn {
@@ -263,12 +257,7 @@
 
 @media only screen and (max-width: 1300px) {}
 
-@media only screen and (max-width: 1250px) {
-    .btn-box {
-        margin-left: 22px;
-        width: 24.5rem;
-    }
-}
+@media only screen and (max-width: 1250px) {}
 
 @media only screen and (max-width: 1200px) {
     .traslate {
@@ -286,13 +275,13 @@
     }
 
     .traslate {
-        left: -17% !important;
+        left: -18% !important;
     }
 }
 
 @media only screen and (max-width: 1100px) {
     .traslate {
-        left: -16% !important;
+        left: -18% !important;
     }
 }
 
@@ -314,12 +303,20 @@
 
         .img-home {
             position: static;
-            width: clamp(15rem, 92.958vw + 1.056rem, 56.25rem);
+            width: clamp(15rem, 63.889vw + 3.819rem, 43.75rem);
+        }
+    }
+
+    .change-text {
+        span {
+            font-size: clamp(1.0625rem, 0.4549rem + 3.4722vw, 2.625rem);
+            top: clamp(2.813rem, 8.472vw + 1.33rem, 6.625rem) !important;
         }
     }
 
     .btn-box {
         margin-top: 65px;
+        margin-left: 0 !important;
     }
 
     .home-content {
@@ -329,8 +326,8 @@
             font-size: clamp(1.8125rem, .0208333333rem + 7.5438596491vw, 4.5rem);
         }
 
-        span {
-            font-size: clamp(1.25rem, .0166666667rem + 5.1929824561vw, 3.1rem);
+        .traslate {
+            font-size: clamp(1.625rem, 0.7986rem + 4.7222vw, 3.75rem);
         }
     }
 
