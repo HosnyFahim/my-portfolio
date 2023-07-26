@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms'; // Importiere FormsModule
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +22,7 @@ const routes: Routes = [
   { path: 'contact', component: ConctactComponent },
   { path: 'imprint', component: ImprintComponent },
 ];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +37,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule, // Füge FormsModule hinzu
     RouterModule.forRoot(routes)
   ],
   providers: [],

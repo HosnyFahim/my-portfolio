@@ -13,19 +13,27 @@
 
     <form>
         <div class="input-parent">
-            <input type="text" placeholder="Your Name" (click)="highlightInput('name')"
-                [ngClass]="{ 'active': activeInput === 'name' }">
-            <span class="transparent">Your name is required</span>
+            <input type="text" name="name" placeholder="Your name"
+                [ngClass]="{ 'empty-focused': activeInput === 'name', 'input-has-content': nameInputValue }"
+                [(ngModel)]="nameInputValue" (focus)="highlightInput('name')" (blur)="unhighlightInput()" />
+            <span class="transparent" [ngClass]="{ 'red': activeInput === 'name' && !nameInputValue }">Your name is
+                required</span>
         </div>
         <div class="input-parent">
-            <input type="text" placeholder="Your Email" (click)="highlightInput('email')"
-                [ngClass]="{ 'active': activeInput === 'email' }">
-            <span class="transparent">Your email is required</span>
+            <input type="email" name="email" placeholder="Your email"
+                [ngClass]="{ 'empty-focused': activeInput === 'email', 'input-has-content': isEmailValid(emailInputValue) }"
+                [(ngModel)]="emailInputValue" (focus)="highlightInput('email')" (blur)="unhighlightInput()" />
+            <span class="transparent"
+                [ngClass]="{ 'red': activeInput === 'email' && (!emailInputValue || !isEmailValid(emailInputValue)) }">Your
+                email is required</span>
         </div>
         <div class="input-parent">
-            <textarea placeholder="Add Message" (click)="highlightInput('message')"
-                [ngClass]="{ 'active': activeInput === 'message' }"></textarea>
-            <span class="transparent">Your message is empty</span>
+            <textarea name="message"
+                [ngClass]="{ 'empty-focused': activeInput === 'message', 'textarea-has-content': messageInputValue }"
+                [(ngModel)]="messageInputValue" (focus)="highlightInput('message')"
+                (blur)="unhighlightInput()"></textarea>
+            <span class="transparent" [ngClass]="{ 'red': activeInput === 'message' && !messageInputValue }">Your
+                message is empty</span>
         </div>
         <div class="btn-box formBtn">
             <button type="submit" class="btn">Send</button>
