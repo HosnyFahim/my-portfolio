@@ -83,7 +83,7 @@ p {
     background-size: cover;
     width: clamp(350px, 204.0955631399px + 15.3583617747vw, 440px);
     height: clamp(370px, 204.0955631399px + 15.3583617747vw, 460px);
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     box-shadow: var(--neon-box-shadow);
     animation: animate 15s ease-in-out infinite;
     transition: all 200ms ease-in-out;
@@ -105,19 +105,19 @@ p {
 
     0%,
     100% {
-        border-radius: 30% 0% 0% 0% / 30% 0% 0% 0%;
+        border-radius: 10% 0% 0% 0% / 10% 0% 0% 0%;
     }
 
     25% {
-        border-radius: 0% 30% 0% 0% / 0% 30% 0% 0%;
+        border-radius: 0% 10% 0% 0% / 0% 10% 0% 0%;
     }
 
     50% {
-        border-radius: 0% 0% 30% 0% / 0% 0% 30% 0%;
+        border-radius: 0% 0% 10% 0% / 0% 0% 10% 0%;
     }
 
     75% {
-        border-radius: 0% 0% 0% 30% / 0% 0% 0% 30%;
+        border-radius: 0% 0% 0% 10% / 0% 0% 0% 10%;
     }
 }
 

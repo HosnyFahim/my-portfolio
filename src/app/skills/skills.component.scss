@@ -71,7 +71,7 @@ img:hover {
             width: 12rem;
             height: 100%;
             background: var(--main-color);
-            border: 2px solid var(--main-color);
+            border: 1px solid var(--main-color);
             box-shadow: var(--neon-box-shadow);
             font-size: clamp(1.25rem, 1.0427631579rem + .4111842105vw, 1.6375rem);
             font-weight: 600;
@@ -79,6 +79,7 @@ img:hover {
             z-index: 1;
             overflow: hidden;
             transition: border-radius 225ms;
+            border-radius: 10px;
 
         }
     }
@@ -87,7 +88,7 @@ img:hover {
 .btn:hover {
     color: var(--main-color) !important;
     transition: 225ms ease-in-out;
-    border-radius: 0% 0% 50px 0% / 0% 0% 50px 0%;
+    border-radius: 0% 0% 50px 0% / 0% 0% 50px 0% !important;
 }
 
 .btn-box .btn::before {

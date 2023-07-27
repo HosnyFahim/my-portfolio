@@ -5,6 +5,7 @@
     color: #fff;
     position: relative;
     padding: 0 0 0 10%;
+    margin-top: 100px;
     scroll-margin-top: 100px;
 
     .right-line {
@@ -96,10 +97,12 @@
 
 .transparent {
     color: transparent;
+    transition: 225ms ease-in-out;
 }
 
 .red {
     color: #e61c40;
+    transition: 225ms ease-in-out;
 }
 
 .input-parent {
@@ -159,7 +162,7 @@
     width: 12rem;
     height: 4rem;
     background: var(--main-color);
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     box-shadow: var(--neon-box-shadow);
     font-size: 1.8rem;
     font-weight: 600;
@@ -169,6 +172,7 @@
     overflow: hidden;
     cursor: pointer;
     transition: border-radius 225ms;
+    border-radius: 10px;
 }
 
 .btn:hover {
