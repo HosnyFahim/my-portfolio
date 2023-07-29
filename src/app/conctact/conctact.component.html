@@ -1,6 +1,7 @@
 <div class="contact-title" id="contact">
     <div class="right-line"></div>
     <span>Contact</span>
+    <img src="/assets/img/vector5.svg" alt="">
 </div>
 
 <section class="contact-section">
@@ -28,7 +29,7 @@
                 email is required</span>
         </div>
         <div class="input-parent">
-            <textarea name="message"
+            <textarea name="message" placeholder="Your message"
                 [ngClass]="{ 'empty-focused': activeInput === 'message', 'textarea-has-content': messageInputValue }"
                 [(ngModel)]="messageInputValue" (focus)="highlightInput('message')"
                 (blur)="unhighlightInput()"></textarea>
@@ -39,4 +40,5 @@
             <button type="submit" class="btn">Send</button>
         </div>
     </form>
+    <img src="/assets/img/vector6.svg" alt="" class="background">
 </section>

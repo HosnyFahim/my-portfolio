@@ -27,6 +27,13 @@
         z-index: 15;
         background-color: #141d2f;
     }
+
+    img {
+        position: absolute;
+        right: 0;
+        width: 200px;
+        bottom: 26%;
+    }
 }
 
 
@@ -51,6 +58,7 @@
         width: 70%;
         margin: 20px 0 20px 0px;
     }
+
 }
 
 .contact-section {
@@ -195,6 +203,14 @@
 
 .btn:hover::before {
     width: 100%;
+}
+
+.background {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 300px;
+    bottom: -40%;
 }
 
 
