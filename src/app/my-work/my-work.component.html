@@ -25,8 +25,10 @@
                 <span>{{ project.undertitle }}</span>
                 <p>{{ project.description }}</p>
                 <div class="project-btn">
-                    <a href="#">Try it</a>
-                    <a href="#">Git</a>
+                    <a target="_blank" [href]="getTryItLink(project.title)"
+                        *ngIf="project.tryIt !== '#' && !(project.category === 'angular' && project.title === 'Portfolio')">Try
+                        it</a>
+                    <a target="_blank" [href]="getGitLink(project.title)">Git</a>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit{
-  words: string[] = ['PROGRAMMER...', 'FRONTEND DEVELOPER'];
+  words: string[] = ['PROGRAMMER </>','FRONTEND DEVELOPER'];
   currentWordIndex: number = 0;
   currentWord: string = '';
   isTyping: boolean = false;
@@ -26,13 +26,13 @@ that runs every second. */
     setInterval(() => {
       if (!this.isTyping) {
         this.typeWord(this.words[this.currentWordIndex])
-          .then(() => this.delay(1000))
+          .then(() => this.delay(2500))
           .then(() => this.deleteWord(this.words[this.currentWordIndex]))
           .then(() => {
             this.currentWordIndex = (this.currentWordIndex + 1) % this.words.length;
           });
       }
-    }, 1000);
+    }, 100);
   }
   
 /**
