@@ -17,23 +17,30 @@ export class MyWorkComponent {
     {
       title: 'El Pollo Loco',
       undertitle: 'OPP | JavaScript | HTML | CSS',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe Peligroso to win his live or die fight again the chickens.',
+      image: '/assets/img/pollo-loco.png',
+      category: 'javascript'
+    },
+    {
+      title: 'Pokedex',
+      undertitle: 'API | Bootstrap | JavaScript | HTML | CSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      image: '/assets/img/el-pollo-loco.png',
-      category: 'angular'
+      image: '/assets/img/pokedex.png',
+      category: 'javascript'
     },
     {
       title: 'Ring of Fire',
-      undertitle: 'Angular | TypeScript | HTML | SCSS',
+      undertitle: 'Angular | TypeScript | Fire base | HTML | SCSS',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      image: '/assets/img/join.png',
+      image: '/assets/img/ring-of-fire.png',
       category: 'angular'
     },
     {
       title: 'Portfolio',
       undertitle: 'Angula | TypeScript | HTML | SCSS',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-      image: '/assets/img/el-pollo-loco.png',
-      category: 'javascript'
+      description: 'My personal website.',
+      image: '/assets/img/portfolio.png',
+      category: 'angular'
     }
   ];
 
@@ -43,7 +50,7 @@ export class MyWorkComponent {
     if (this.activeButton === 'angular') {
       return this.projects.filter(project => project.category === 'angular').slice(-2);
     } else if (this.activeButton === 'javascript') {
-      return this.projects.filter(project => project.category === 'javascript').slice(0, 2);
+      return this.projects.filter(project => project.category === 'javascript').slice(0, 3);
     } else {
       return this.projects;
     }
