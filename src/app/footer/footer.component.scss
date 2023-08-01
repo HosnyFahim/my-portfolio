@@ -44,7 +44,7 @@
 
 
     .links {
-        width: 16rem;
+        width: 14rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -70,6 +70,11 @@
             height: 40px;
             filter: invert(66%) sepia(71%) saturate(5110%) hue-rotate(164deg) brightness(100%) contrast(200%);
             transition: 225ms;
+        }
+
+        .mail {
+            width: 32px;
+            height: 32px;
         }
     }
 }
@@ -100,10 +105,73 @@
     width: 100%;
 }
 
-.gu-up {
+.go-up {
     position: absolute;
     top: -100px;
     right: 10%;
     cursor: pointer;
     object-fit: contain;
+
+    img {
+        width: 39px;
+        height: 39px;
+    }
+}
+
+.go-up:hover {
+    transform: scale(1.1);
+    transition: all 225ms ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 50px 5% 100px;
+        gap: 30px;
+
+        .logo {
+            width: 100%;
+            align-items: center;
+
+            .imprint {
+                position: absolute;
+                bottom: 50px;
+            }
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .footer-section {
+        img {
+            width: 60px;
+            height: 55px;
+        }
+    }
+
+    .links {
+        a {
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        img {
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        .mail {
+            width: 24px !important;
+            height: 24px !important;
+        }
+    }
 }

@@ -135,7 +135,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 28rem;
+    width: clamp(25rem, 24.138vw + 9.159rem, 38.125rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -166,8 +166,8 @@
     }
 
     .mail {
-        width: 34px !important;
-        height: 34px !important;
+        width: 32px !important;
+        height: 32px !important;
     }
 
     img {

@@ -21,8 +21,8 @@
                 <img [src]="project.image">
             </div>
             <div class="project-content">
-                <span>{{ project.title }}</span>
-                <span>{{ project.undertitle }}</span>
+                <span class="project-name">{{ project.title }}</span>
+                <span class="project-tech">{{ project.undertitle }}</span>
                 <p>{{ project.description }}</p>
                 <div class="project-btn">
                     <a target="_blank" [href]="getTryItLink(project.title)"

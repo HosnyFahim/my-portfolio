@@ -28,7 +28,7 @@ export class MyWorkComponent {
     {
       title: 'Pokedex',
       undertitle: 'API | Bootstrap | JavaScript | HTML | CSS',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Pocket-Monster-Deck" using Rest API',
       image: '/assets/img/pokedex.png',
       category: 'javascript',
       tryIt: 'https://example.com/pokedex',
@@ -37,7 +37,7 @@ export class MyWorkComponent {
     {
       title: 'Ring of Fire',
       undertitle: 'Angular | TypeScript | Firebase | HTML | SCSS',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+      description: 'Famous Drinking-Game Online',
       image: '/assets/img/ring-of-fire.png',
       category: 'angular',
       tryIt: 'https://example.com/ring-of-fire',
