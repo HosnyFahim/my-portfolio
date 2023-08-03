@@ -85,6 +85,7 @@
     box-shadow: var(--neon-box-shadow-3) !important;
     background: url(/assets/icons/danger.svg) no-repeat scroll 7px 7px !important;
     background-position: calc(100% - 20px) 10px !important;
+    transition: none !important;
 }
 
 .input-has-content {
@@ -92,7 +93,7 @@
     box-shadow: var(--neon-box-shadow-4) !important;
     background: url(/assets/icons/success-green.svg) no-repeat scroll 7px 7px !important;
     background-position: calc(100% - 20px) 10px !important;
-    transition: all ease-in-out;
+    transition: all 225ms ease-in-out !important;
 }
 
 .textarea-has-content {
@@ -100,7 +101,7 @@
     box-shadow: var(--neon-box-shadow-4) !important;
     background: url(/assets/icons/success-blue.svg) no-repeat scroll 7px 7px !important;
     background-position: calc(100% - 20px) 10px !important;
-    transition: all ease-in-out;
+    transition: all 225ms ease-in-out !important;
 }
 
 .transparent {
@@ -130,11 +131,11 @@
         background: #141D2F;
         color: #fff;
         caret-color: #fff;
-        transition: 225ms ease-in-out;
 
         &:hover {
             border: 1px solid var(--main-color);
             box-shadow: var(--neon-box-shadow);
+            transition: all 225ms ease-in-out;
         }
     }
 
@@ -152,11 +153,11 @@
         caret-color: #fff;
         resize: none;
         font-family: 'Poppins', Arial, Helvetica, sans-serif;
-        transition: 225ms ease-in-out;
 
         &:hover {
             border: 1px solid var(--main-color);
             box-shadow: var(--neon-box-shadow);
+            transition: all 225ms ease-in-out;
         }
     }
 }
@@ -185,7 +186,7 @@
 
 .btn:hover {
     color: var(--main-color);
-    transition: 225ms ease-in-out;
+    transition: 225ms ease-in-out !important;
     border-radius: 0px 0px 40px 0px;
 }
 

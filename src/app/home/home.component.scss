@@ -163,6 +163,17 @@
         overflow: hidden;
         transition: border-radius 225ms;
         border-radius: 5px;
+
+        &:hover {
+            color: var(--first-bg-color);
+            border-radius: 0% 0% 15px 0%;
+            border: none;
+
+            img {
+                filter: invert(8%) sepia(16%) saturate(3327%) hue-rotate(169deg) brightness(95%) contrast(96%);
+            }
+        }
+
     }
 
     .mail {
@@ -184,15 +195,8 @@
     top: clamp(60%, 17.7303754266px + 10.2389078498vw, 28%);
 }
 
-.home-socials img:hover {
-    filter: invert(8%) sepia(16%) saturate(3327%) hue-rotate(169deg) brightness(95%) contrast(96%);
-}
 
-.home-socials a:hover {
-    color: var(--first-bg-color);
-    border-radius: 0% 0% 15px 0%;
-    border: none;
-}
+
 
 .home-socials a::before {
     content: '';

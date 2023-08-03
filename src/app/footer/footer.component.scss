@@ -63,6 +63,16 @@
             overflow: hidden;
             transition: border-radius 225ms;
             border-radius: 5px;
+
+            &:hover {
+                color: var(--first-bg-color);
+                border-radius: 0% 0% 15px 0%;
+                border: none;
+
+                img {
+                    filter: invert(8%) sepia(16%) saturate(3327%) hue-rotate(169deg) brightness(95%) contrast(96%);
+                }
+            }
         }
 
         img {
@@ -79,15 +89,7 @@
     }
 }
 
-.links img:hover {
-    filter: invert(8%) sepia(16%) saturate(3327%) hue-rotate(169deg) brightness(95%) contrast(96%) !important;
-}
 
-.links a:hover {
-    color: var(--first-bg-color);
-    border-radius: 0% 0% 15px 0% !important;
-    border: none;
-}
 
 .links a::before {
     content: '';
