@@ -12,16 +12,16 @@
         <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
 
-    <form>
+    <form (submit)="sendMail()" ngNativeValidate #myForm>
         <div class="input-parent">
-            <input type="text" name="name" placeholder="Your name"
+            <input required type="text" name="name" placeholder="Your name" #nameField
                 [ngClass]="{ 'empty-focused': activeInput === 'name', 'input-has-content': nameInputValue }"
                 [(ngModel)]="nameInputValue" (focus)="highlightInput('name')" (blur)="unhighlightInput()" />
             <span class="transparent" [ngClass]="{ 'red': activeInput === 'name' && !nameInputValue }">Your name is
                 required</span>
         </div>
         <div class="input-parent">
-            <input type="email" name="email" placeholder="Your email"
+            <input required type="email" name="email" placeholder="Your email" #mailField
                 [ngClass]="{ 'empty-focused': activeInput === 'email', 'input-has-content': isEmailValid(emailInputValue) }"
                 [(ngModel)]="emailInputValue" (focus)="highlightInput('email')" (blur)="unhighlightInput()" />
             <span class="transparent"
@@ -29,7 +29,7 @@
                 email is required</span>
         </div>
         <div class="input-parent">
-            <textarea name="message" placeholder="Your message"
+            <textarea required name="message" placeholder="Your message" #messageField
                 [ngClass]="{ 'empty-focused': activeInput === 'message', 'textarea-has-content': messageInputValue }"
                 [(ngModel)]="messageInputValue" (focus)="highlightInput('message')"
                 (blur)="unhighlightInput()"></textarea>
@@ -37,7 +37,7 @@
                 message is empty</span>
         </div>
         <div class="btn-box formBtn">
-            <button type="submit" class="btn">Send</button>
+            <button type="submit" #sendButton class="btn">Send</button>
         </div>
     </form>
     <img src="/assets/img/vector6.svg" alt="" class="background">
