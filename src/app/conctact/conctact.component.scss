@@ -5,7 +5,7 @@
     color: #fff;
     position: relative;
     padding: 0 0 0 10%;
-    margin-top: 100px;
+    margin-top: clamp(7.5rem, 5.263vw + 6.184rem, 12.5rem);
     scroll-margin-top: 100px;
 
     .right-line {
@@ -222,6 +222,12 @@
         .right-line {
             width: calc(4% - 5px);
         }
+    }
+
+    .background {
+
+        width: 200px;
+        bottom: -30%;
     }
 
     .contact-section {
