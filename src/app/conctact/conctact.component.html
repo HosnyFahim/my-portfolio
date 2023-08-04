@@ -12,7 +12,7 @@
         <p>Need a Frontend developer? <b>Contact me!</b></p>
     </div>
 
-    <form (submit)="sendMail()" ngNativeValidate #myForm>
+    <form (submit)="sendMail()" ngNativeValidate #myForm="ngForm">
         <div class="input-parent">
             <input required type="text" name="name" placeholder="Your name" #nameField
                 [ngClass]="{ 'empty-focused': activeInput === 'name', 'input-has-content': nameInputValue }"
@@ -37,7 +37,11 @@
                 message is empty</span>
         </div>
         <div class="btn-box formBtn">
-            <button type="submit" #sendButton class="btn">Send</button>
+            <!-- Hier wird der Zustand der Animation mit isSending überwacht -->
+            <button type="submit" #sendButton class="btn">
+                <span [ngClass]="{ 'hidden': isSending }">Send</span>
+                <span [ngClass]="{ 'hidden': !isSending }">Danke :)</span>
+            </button>
         </div>
     </form>
     <img src="/assets/img/vector6.svg" alt="" class="background">

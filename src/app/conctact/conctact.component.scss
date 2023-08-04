@@ -182,6 +182,7 @@
     cursor: pointer;
     transition: border-radius 225ms;
     border-radius: 10px;
+    transition: all 200ms ease-in-out;
 }
 
 .btn:hover {
@@ -202,6 +203,11 @@
     transition: 225ms;
 }
 
+
+.hidden {
+    display: none;
+}
+
 .btn:hover::before {
     width: 100%;
 }
@@ -213,6 +219,10 @@
     width: 300px;
     bottom: -40%;
 }
+
+
+// -------------------------Loading Animation------------------------------//
+
 
 
 @media only screen and (max-width: 900px) {
