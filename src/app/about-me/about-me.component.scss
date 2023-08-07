@@ -79,8 +79,8 @@ p {
 }
 
 .img-box {
-    background: url(/assets/img/my-img2.png);
-    background-size: cover;
+    background: url(/assets/img/my-img2.png) no-repeat;
+    background-size: clamp(20.313rem, 19.042vw + 8.399rem, 31.25rem);
     width: clamp(350px, 204.0955631399px + 15.3583617747vw, 440px);
     height: clamp(370px, 204.0955631399px + 15.3583617747vw, 460px);
     border: 1px solid var(--main-color);

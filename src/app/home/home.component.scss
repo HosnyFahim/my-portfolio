@@ -350,6 +350,10 @@
         top: clamp(45%, 17.7303754266px + 10.2389078498vw, 28%);
     }
 
+    .left-line {
+        width: 40px !important;
+    }
+
     .home-socials {
         bottom: 60px;
         width: 77%;
@@ -360,10 +364,6 @@
 @media only screen and (max-width: 550px) {
     .home-socials {
         bottom: 25px;
-
-        .left-line {
-            width: 40px;
-        }
 
         a {
             width: 30px;

@@ -1,5 +1,7 @@
 <header class="header">
-    <img src="./assets/icons/logo.png" class="logo">
+    <a href="#">
+        <img src="./assets/icons/logo.png" class="logo">
+    </a>
     <nav class="navBar" [class.active]="isMenuOpen && isMobileResolution">
         <a href="#home" [class.active]="isActiveHome" (click)="closeMenu()">Home</a>
         <a href="#about" [class.active]="isActiveAbout" (click)="closeMenu()">About Me</a>

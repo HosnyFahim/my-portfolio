@@ -11,13 +11,10 @@ import { MyWorkComponent } from './my-work/my-work.component';
 import { ConctactComponent } from './conctact/conctact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { FooterComponent } from './footer/footer.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutMeComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'myWork', component: MyWorkComponent },
-  { path: 'contact', component: ConctactComponent },
+  { path: '', component: PortfolioComponent },
   { path: 'imprint', component: ImprintComponent },
 ];
 
@@ -31,7 +28,8 @@ const routes: Routes = [
     MyWorkComponent,
     ConctactComponent,
     ImprintComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
