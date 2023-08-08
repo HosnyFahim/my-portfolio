@@ -23,7 +23,7 @@ export class MyWorkComponent {
       image: '/assets/img/pollo-loco.png',
       category: 'javascript',
       tryIt: 'https://hosny-fahim.com/el-pollo-loco/',
-      git: 'https://github.com/example/pollo-loco'
+      git: 'https://github.com/HosnyFahim/El-Pollo-Loco'
     },
     {
       title: 'Pokedex',
@@ -40,7 +40,7 @@ export class MyWorkComponent {
       description: 'Famous Drinking-Game Online',
       image: '/assets/img/ring-of-fire.png',
       category: 'angular',
-      tryIt: 'https://example.com/ring-of-fire',
+      tryIt: 'https://hosny-fahim.com/ring-of-fire/',
       git: 'https://github.com/HosnyFahim/Ring-of-fire'
     },
     {
