@@ -2,6 +2,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
 import { Renderer2 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
   selector: 'app-conctact',
   templateUrl: './conctact.component.html',
@@ -61,7 +62,7 @@ export class ConctactComponent {
       });
 
       // Nachdem die E-Mail gesendet wurde, zeigen Sie den Text "Danke :)" im Button an
-      this.renderer.setProperty(this.sendButton.nativeElement, 'innerText', 'Danke :)');
+      this.renderer.setProperty(this.sendButton.nativeElement, 'innerText', 'Thanks :)');
 
       // Warten Sie 2 Sekunden und setzen Sie dann den Text des Buttons auf "Send" zurück und setzen Sie die Formulardaten zurück
       setTimeout(() => {

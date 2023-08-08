@@ -382,7 +382,7 @@
     }
 
     .traslate {
-        left: -21% !important;
+        left: -25% !important;
     }
 
     .parent-container {
@@ -391,8 +391,4 @@
     }
 }
 
-@media only screen and (max-width: 400px) {
-    .traslate {
-        left: -23% !important;
-    }
-}
+@media only screen and (max-width: 400px) {}
