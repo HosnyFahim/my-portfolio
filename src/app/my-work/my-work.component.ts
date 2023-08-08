@@ -13,7 +13,7 @@ export class MyWorkComponent {
       description: 'A Kanban Project Management Web-App. Create tasks, assign users and categories, and change task status by simply using drag-and-drop.',
       image: '/assets/img/join.png',
       category: 'javascript',
-      tryIt: 'https://hosny-fahim.developerakademie.net/join/',
+      tryIt: 'https://hosny-fahim.com/join/',
       git: 'https://github.com/HosnyFahim/join'
     },
     {
@@ -22,7 +22,7 @@ export class MyWorkComponent {
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe Peligroso to win his live or die fight again the chickens.',
       image: '/assets/img/pollo-loco.png',
       category: 'javascript',
-      tryIt: 'https://example.com/pollo-loco',
+      tryIt: 'https://hosny-fahim.com/el-pollo-loco/',
       git: 'https://github.com/example/pollo-loco'
     },
     {
@@ -31,8 +31,8 @@ export class MyWorkComponent {
       description: 'Pocket-Monster-Deck" using Rest API',
       image: '/assets/img/pokedex.png',
       category: 'javascript',
-      tryIt: 'https://example.com/pokedex',
-      git: 'https://github.com/example/pokedex'
+      tryIt: 'https://hosny-fahim.com/pokedex/',
+      git: 'https://github.com/HosnyFahim/Pokedex'
     },
     {
       title: 'Ring of Fire',
@@ -41,7 +41,7 @@ export class MyWorkComponent {
       image: '/assets/img/ring-of-fire.png',
       category: 'angular',
       tryIt: 'https://example.com/ring-of-fire',
-      git: 'https://github.com/example/ring-of-fire'
+      git: 'https://github.com/HosnyFahim/Ring-of-fire'
     },
     {
       title: 'Portfolio',
