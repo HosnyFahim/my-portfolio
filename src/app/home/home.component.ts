@@ -65,7 +65,7 @@ that runs every second. */
           clearInterval(intervalId);
           resolve();
         }
-      }, 100);
+      }, 70);
     });
   }
 
@@ -83,7 +83,7 @@ representing the word that needs to be deleted. */
           resolve();
           this.isTyping = false;
         }
-      }, 100);
+      }, 45);
     });
   }
 
