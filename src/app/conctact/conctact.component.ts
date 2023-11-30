@@ -56,7 +56,7 @@ export class ConctactComponent {
 
     try {
       this.isSending = true;
-      await fetch('https://hosny-fahim.developerakademie.net/send_mail/send_mail.php', {
+      await fetch('https://hosny-fahim.com/send_mail.php', {
         method: 'POST',
         body: fd
       });
