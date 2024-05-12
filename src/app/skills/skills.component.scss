@@ -16,8 +16,16 @@ section {
     z-index: 15;
 }
 
+.skill-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
 img:hover {
-    animation: jump 225ms;
+    animation: jump 400ms;
 }
 
 .right-line {
@@ -126,7 +134,7 @@ img:hover {
     }
 
     25% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 
     50% {
@@ -134,7 +142,7 @@ img:hover {
     }
 
     75% {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
     }
 
     100% {

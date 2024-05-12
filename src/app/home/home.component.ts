@@ -83,7 +83,7 @@ representing the word that needs to be deleted. */
           resolve();
           this.isTyping = false;
         }
-      }, 45);
+      }, 20);
     });
   }
 
