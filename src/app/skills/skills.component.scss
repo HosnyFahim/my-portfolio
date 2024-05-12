@@ -11,7 +11,7 @@ section {
 .icons-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 20px clamp(60px, 11.3651877133px + 5.1194539249vw, 90px);
+    gap: 40px clamp(60px, 11.3651877133px + 5.1194539249vw, 90px);
     max-width: 60%;
     z-index: 15;
 }
@@ -22,11 +22,20 @@ section {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    gap: 10px;
+
+    &:hover {
+        img {
+            animation: jump 400ms;
+        }
+    }
+
+    img {
+        max-width: 70px;
+    }
 }
 
-img:hover {
-    animation: jump 400ms;
-}
+// img:hover {}
 
 .right-line {
     position: absolute;
@@ -162,11 +171,11 @@ img:hover {
 
     .icons-container {
         grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-        gap: 20px clamp(25px, -46.1111111111px + 22.2222222222vw, 165px);
+        gap: 40px clamp(25px, -46.1111111111px + 22.2222222222vw, 165px);
         max-width: 100%;
 
         img {
-            width: clamp(70px, 60.8571428571px + 2.8571428571vw, 88px);
+            max-width: 50px;
         }
     }
 
