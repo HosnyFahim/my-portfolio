@@ -12,10 +12,12 @@ import { ConctactComponent } from './conctact/conctact.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { FooterComponent } from './footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { DatenschutzComponent} from './datenschutz/datenschutz.component'; // Beispiel: DatenschutzModule importieren
 
 const routes: Routes = [
   { path: '', component: PortfolioComponent },
   { path: 'imprint', component: ImprintComponent },
+  { path: 'datenschutz', component: DatenschutzComponent },
 ];
 
 @NgModule({
@@ -35,7 +37,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule, 
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]
