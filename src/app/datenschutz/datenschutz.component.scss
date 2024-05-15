@@ -1,0 +1,26 @@
+.datenschutz-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    font-family: 'Poppins', sans-serif;
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        margin-top: 140px;
+        gap: 10px;
+
+        a {
+            text-decoration: none;
+            color: var(--main-color);
+        }
+
+        p {
+            margin: 6px;
+        }
+    }
+}
