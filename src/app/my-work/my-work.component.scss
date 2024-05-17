@@ -119,11 +119,15 @@
         background: var(--first-bg-color);
         display: flex;
         align-items: center;
-        border: 2px solid var(--main-color);
-        box-shadow: var(--neon-box-shadow);
+        border: none;
         transition: border-radius 225ms;
-        border-radius: 10px;
+        border-radius: 15px;
         z-index: 20;
+
+        &:hover {
+            box-shadow: var(--neon-box-shadow);
+            transition: all 350ms ease-in-out;
+        }
 
         .project-img {
             display: flex;
