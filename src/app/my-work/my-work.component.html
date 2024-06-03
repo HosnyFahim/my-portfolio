@@ -5,12 +5,11 @@
 </div>
 
 <section class="my-work" id="portfolio">
-
-
     <div class="filter-buttons">
         <button class="btn" [ngClass]="{ active: activeButton === 'all' }" (click)="setActiveButton('all')">All</button>
         <button class="btn" [ngClass]="{ active: activeButton === 'angular' }"
             (click)="setActiveButton('angular')">Angular</button>
+        <button class="btn" [ngClass]="{ active: activeButton === 'vue' }" (click)="setActiveButton('vue')">Vue</button>
         <button class="btn" [ngClass]="{ active: activeButton === 'javascript' }"
             (click)="setActiveButton('javascript')">JavaScript</button>
     </div>
@@ -25,10 +24,8 @@
                 <span class="project-tech">{{ project.undertitle }}</span>
                 <p>{{ project.description }}</p>
                 <div class="project-btn">
-                    <a target="_blank" [href]="getTryItLink(project.title)"
-                        *ngIf="project.tryIt !== '#' && !(project.category === 'angular' && project.title === 'Portfolio')">Try
-                        it</a>
-                    <a target="_blank" [href]="getGitLink(project.title)">Git</a>
+                    <a target="_blank" [href]="getTryItLink(project.title)" *ngIf="project.tryIt !== '#'">Try it</a>
+                    <a target="_blank" [href]="project.git" *ngIf="project.git">Git</a>
                 </div>
             </div>
         </div>

@@ -8,8 +8,18 @@ import { Component } from '@angular/core';
 export class MyWorkComponent {
   projects = [
     {
+      title: 'StBVS',
+      undertitle: 'Vue 3 | JavaScript | Bootstrap | php',
+      description: 'A company website for the Steuerberater Verrechnungsstelle.',
+      image: '/assets/img/stbvs.png',
+      category: 'vue',
+      tryIt: 'https://stbvs.com/',
+      git: null
+      
+    },
+    {
       title: 'Join',
-      undertitle: 'JavaScript | HTML | CSS | Backend',
+      undertitle: 'JavaScript | HTML | CSS | SQL',
       description: 'A Kanban Project Management Web-App. Create tasks, assign users and categories, and change task status by simply using drag-and-drop.',
       image: '/assets/img/join.png',
       category: 'javascript',
@@ -60,6 +70,8 @@ export class MyWorkComponent {
       return this.projects.filter(project => project.category === 'angular').slice(-2);
     } else if (this.activeButton === 'javascript') {
       return this.projects.filter(project => project.category === 'javascript').slice(0, 3);
+    } else if (this.activeButton === 'vue') {
+      return this.projects.filter(project => project.category === 'vue');
     } else {
       return this.projects;
     }
@@ -72,10 +84,5 @@ export class MyWorkComponent {
   getTryItLink(title: string): string {
     const project = this.projects.find(project => project.title === title);
     return project && project.tryIt ? project.tryIt : '#';
-  }
-
-  getGitLink(title: string): string {
-    const project = this.projects.find(project => project.title === title);
-    return project ? project.git : '#';
   }
 }
