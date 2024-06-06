@@ -11,7 +11,8 @@
             (click)="setActiveButton('angular')">Angular</button>
         <button class="btn" [ngClass]="{ active: activeButton === 'vue' }" (click)="setActiveButton('vue')">Vue</button>
         <button class="btn" [ngClass]="{ active: activeButton === 'javascript' }"
-            (click)="setActiveButton('javascript')">JavaScript</button>
+            (click)="setActiveButton('javascript')"><span class="display-none">JavaScript</span><span
+                class="display-flex">JS</span></button>
     </div>
 
     <div class="project-gallery">
