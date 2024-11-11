@@ -8,16 +8,6 @@ import { Component } from '@angular/core';
 export class MyWorkComponent {
   projects = [
     {
-      title: 'StBVS',
-      undertitle: 'Vue 3 | JavaScript | Bootstrap | php',
-      description: 'A company website for the Steuerberater Verrechnungsstelle.',
-      image: '/assets/img/stbvs.png',
-      category: 'vue',
-      tryIt: 'https://stbvs.com/',
-      git: null
-      
-    },
-    {
       title: 'Join',
       undertitle: 'JavaScript | HTML | CSS | SQL',
       description: 'A Kanban Project Management Web-App. Create tasks, assign users and categories, and change task status by simply using drag-and-drop.',
@@ -59,7 +49,6 @@ export class MyWorkComponent {
       description: 'My personal website.',
       image: '/assets/img/portfolio.png',
       category: 'angular',
-      git: 'https://github.com/HosnyFahim/my-portfolio'
     }
   ];
 
